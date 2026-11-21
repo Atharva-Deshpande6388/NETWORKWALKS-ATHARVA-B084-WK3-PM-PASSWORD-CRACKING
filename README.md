@@ -31,7 +31,7 @@ The two modules both involve recovering a password from a protected PDF, but the
 
 ### 1. Confirm the Kali / John environment
 
-John was available in Kali. Its version output is shown in [Screenshot 01](screenshots/01-kali-john-version.png).
+John was available in Kali. Its version output is shown in ![Screenshot 01](screenshots/01-kali-john-version.png).
 
 ```bash
 john
