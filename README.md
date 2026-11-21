@@ -37,7 +37,7 @@ John was available in Kali. Its version output is shown in ![Screenshot 01](scre
 john
 ```
 
-The supplied PDF was opened first to confirm that it prompted for a password. See [Screenshot 02](screenshots/02-original-pdf-password-prompt.png).
+The supplied PDF was opened first to confirm that it prompted for a password. See ![Screenshot 02](screenshots/02-original-pdf-password-prompt.png).
 
 ### 2. Extract the PDF hash locally
 
@@ -49,7 +49,7 @@ wc -c hash1.txt
 cat hash1.txt
 ```
 
-The captured terminal shows a 193-byte `hash1.txt` file and a PDF hash beginning with `$pdf$`. See [Screenshot 03](screenshots/03-pdf2john-hash-extraction.png). The complete hash is retained in the working file; it is not reproduced in this README.
+The captured terminal shows a 193-byte `hash1.txt` file and a PDF hash beginning with `$pdf$`. See ![Screenshot 03](screenshots/03-pdf2john-hash-extraction.png). The complete hash is retained in the working file; it is not reproduced in this README.
 
 ### 3. Prepare the RockYou wordlist
 
@@ -69,7 +69,7 @@ The captured command was:
 john --wordlist=/usr/share/wordlists/rockyou.txt hash1.txt
 ```
 
-John loaded one PDF password hash and completed the dictionary run. The recovered password displayed in the terminal was **`good-luck`**. See [Screenshot 04](screenshots/04-john-cli-rockyou-dictionary-attack.png).
+John loaded one PDF password hash and completed the dictionary run. The recovered password displayed in the terminal was **`good-luck`**. See ![Screenshot 04](screenshots/04-john-cli-rockyou-dictionary-attack.png).
 
 To display the result from John’s pot file:
 
@@ -77,7 +77,7 @@ To display the result from John’s pot file:
 john --show hash1.txt
 ```
 
-The captured output shows `?:good-luck` and confirms **1 password hash cracked, 0 left**. See [Screenshot 05](screenshots/05-john-cli-recovered-password.png).
+The captured output shows `?:good-luck` and confirms **1 password hash cracked, 0 left**. See ![Screenshot 05](screenshots/05-john-cli-recovered-password.png).
 
 ### 5. Build and launch Johnny on Linux
 
@@ -96,7 +96,7 @@ make -j2
 ./johnny
 ```
 
-Johnny opened successfully. The supplied GUI evidence shows a session containing three PDF-format hash entries, with the status **100% (3/3: 3 cracked, 0 left)**. The three visible recovered values are `good-luck`, `password1`, and `1qaz2wsx`. See [Screenshot 06](screenshots/06-johnny-gui-three-pdf-hashes-cracked.png).
+Johnny opened successfully. The supplied GUI evidence shows a session containing three PDF-format hash entries, with the status **100% (3/3: 3 cracked, 0 left)**. The three visible recovered values are `good-luck`, `password1`, and `1qaz2wsx`. See ![Screenshot 06](screenshots/06-johnny-gui-three-pdf-hashes-cracked.png).
 
 **Scope clarification:** The Johnny screenshot shows three hash rows but does not display the source filenames for those rows. It is therefore evidence of a Johnny GUI session with three cracked PDF-format entries; it is not used here to assign each visible password to a particular PDF filename.
 
@@ -108,7 +108,7 @@ The supplied `My Locked PDF1.pdf` was opened successfully. The unlocked page dis
 nw{cybersecurity_flag_captured_2608}
 ```
 
-See [Screenshot 07](screenshots/07-pm1-unlocked-pdf-flag.png). The corresponding supplied unlocked PDF is included as `unlocked-pdfs/PM1-JTR-unlocked-PDF1.pdf`.
+See ![Screenshot 07](screenshots/07-pm1-unlocked-pdf-flag.png). The corresponding supplied unlocked PDF is included as `unlocked-pdfs/PM1-JTR-unlocked-PDF1.pdf`.
 
 ---
 
@@ -120,7 +120,7 @@ The Networkwalks Hash Calculator was opened in the browser:
 
 <https://networkwalks.com/hash-calculator/>
 
-The initial interface is shown in [Screenshot 08](screenshots/08-networkwalks-hash-calculator-initial.png).
+The initial interface is shown in ![Screenshot 08](screenshots/08-networkwalks-hash-calculator-initial.png).
 
 ### 2. Extract the PM2 PDF hash
 
@@ -128,7 +128,7 @@ The PM2-specific input file was selected:
 
 `My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf`
 
-The calculator identified the PDF as encrypted and generated a crackable hash beginning with `$pdf$`. The output also displayed PDF revision R4, version V4, and a 128-bit key length. See [Screenshot 09](screenshots/09-networkwalks-pdf-hash-extracted.png).
+The calculator identified the PDF as encrypted and generated a crackable hash beginning with `$pdf$`. The output also displayed PDF revision R4, version V4, and a 128-bit key length. See ![Screenshot 09](screenshots/09-networkwalks-pdf-hash-extracted.png).
 
 The hash generated for this PM2 file is distinct from the PM1 hash extracted locally with `pdf2john`.
 
@@ -138,11 +138,11 @@ The Networkwalks Password Cracker was opened:
 
 <https://networkwalks.com/password-cracker/>
 
-The extracted PM2 hash was pasted into the input area. The screenshot shows the built-in list containing 100 passwords selected before the attack. See [Screenshot 10](screenshots/10-networkwalks-password-cracker-ready.png).
+The extracted PM2 hash was pasted into the input area. The screenshot shows the built-in list containing 100 passwords selected before the attack. See ![Screenshot 10](screenshots/10-networkwalks-password-cracker-ready.png).
 
 ### 4. Run the attack and record the result
 
-The attack completed successfully and displayed **`password1`** as the recovered PDF password. The result screenshot shows the success message and the attempt counter at 91/100 when the match was found. See [Screenshot 11](screenshots/11-networkwalks-password-cracked.png).
+The attack completed successfully and displayed **`password1`** as the recovered PDF password. The result screenshot shows the success message and the attempt counter at 91/100 when the match was found. See ![Screenshot 11](screenshots/11-networkwalks-password-cracked.png).
 
 ### 5. Verify the PM2 output
 
