@@ -20,7 +20,6 @@ The exercises use training PDFs supplied for the Networkwalks lab. All testing d
 | GUI | Johnny, built from source |
 | PM2 tools | Networkwalks Hash Calculator and Networkwalks Password Cracker in a web browser |
 
-**Evidence note about the browser screenshots:** Screenshots 08–11 visibly show a Windows desktop taskbar beneath Chrome. They therefore establish the Networkwalks browser workflow, but do not establish that those browser actions were performed inside Kali. The PM2 instructions state that the browser tools can be used on Kali as well. If the submission requires every screenshot to demonstrate a Linux desktop, retake Screenshots 08–11 from a browser running inside Kali rather than presenting the current captures as Kali screenshots.
 
 ## Project workflow
 
